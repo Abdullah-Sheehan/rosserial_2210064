@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_drive">
+        <param name="port" value="/dev/ttyUSB0"/>
+        <param name="baud" value="100000"/>
+    </node>
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_sensor">
+        <param name="port" value="/dev/ttyUSB1"/>
+        <param name="baud" value="100000"/>
+    </node>
+    <node pkg="rosserial_2210064" type="executable" name="avoid_obstacle" />
+</launch>
